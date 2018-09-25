@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Model_barang extends CI_Model {
+class Model_pegawai extends CI_Model {
 
-	public function get()
+	public function get_all()
 	{
-		return $this->db->get('barang');		
-	}	
+		return $this->db->get('pegawai')->result();
+	}
 
 }
 

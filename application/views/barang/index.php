@@ -7,6 +7,7 @@
   </section>
   <section class="content">
   	<div class="nav-tabs-custom" style="padding: 20px;">
+      <button class="btn btn-primary" style="margin-bottom: 10px ">Tambah</button>
      <table id="example" class="display" style="width:100%">
       <thead>
         <tr>
@@ -21,18 +22,37 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th>a</th>
-          <th>a</th>
-          <th>a</th>
-          <th>a</th>
-          <th>a</th>
-          <th>a</th>
-          <th>a</th>
-          <th>
-            <button></button>
-          </th>
-        </tr>
+          
+          <tr>
+            <?php foreach ($get as $value): ?>
+              <td>
+                <?php echo $value->nip;?>
+              </td>
+              <td>
+                <?php echo $value->nip;?>
+              </td>
+              <td>
+                <?php echo $value->jenis_kelamin;?>
+              </td>
+              <td>
+                <?php echo $value->tempat_lahir;?>
+              </td>
+              <td>
+                <?php echo $value->tgl_lahir;?>
+              </td>
+              <td>
+                <?php echo $value->alamat;?>
+              </td>
+              <td>
+                <?php echo $value->no_hp;?>
+              </td>
+              <td>
+                <button class="btn btn-warning"><a style="color: white;" href="<?php echo base_url('Pegawai/Edit/').$value->id ?>">Edit</a></button>
+                <button class="btn btn-danger"><a style="color: white;" href="<?php echo base_url('Pegawai/Delete/').$value->id ?>">Delete</a></button>
+              </td>
+            <?php endforeach ?>    
+          </tr>
+          
       </tbody>
     </table>
   </div>
