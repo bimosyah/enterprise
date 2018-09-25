@@ -277,20 +277,23 @@
         <a href="<?php echo site_url('Barang')?>">
           <i class="fa fa-dashboard"></i> <span>Barang</span>
         </a>
-        <a href="<?php echo site_url('asd')?>">
+        <a href="<?php echo site_url('Gaji')?>">
           <i class="fa fa-money"></i> <span>Gaji</span>
         </a>
-        <a href="#">
+        <a href="<?php echo site_url('Jabatan')?>">
           <i class="fa fa-briefcase"></i> <span>Jabatan</span>
         </a>
-        <a href="#">
+        <a href="<?php echo site_url('Pegawai')?>">
           <i class="fa fa-user"></i> <span>Pegawai</span>
         </a>
-        <a href="#">
+        <a href="<?php echo site_url('Suplier')?>">
           <i class="fa fa-truck"></i> <span>Suplier</span>
         </a>
-        <a href="#">
+        <a href="<?php echo site_url('Transaksi')?>">
           <i class="fa fa-calculator"></i> <span>Transaksi Gudang</span>
+        </a>
+        <a href="<?php echo site_url('Transaksi')?>">
+          <i class="fa fa-calculator"></i> <span>Keuangan</span>
         </a>
       </li>
     </ul>
