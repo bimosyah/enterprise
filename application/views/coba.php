@@ -1,6 +1,4 @@
-<?php $this->load->view('header')?>
 <div class="content-wrapper">
-  <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
       Dashboard
@@ -11,10 +9,10 @@
       <li class="active">Dashboard</li>
     </ol>
   </section>
-
-  <!-- Main content -->
-  
-  <!-- /.content -->
+  <section class="content">
+  	
+  	<div class="nav-tabs-custom">
+  		<h1>wowo</h1>	
+  	</div>
+  </section>
 </div>
-
-<?php $this->load->view('footer')?>
