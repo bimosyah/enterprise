@@ -5,8 +5,12 @@
         <title><?php echo $title?></title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- <link rel="stylesheet" type="text/css" href="cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"> -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
         <!-- Bootstrap 3.3.7 -->
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <link rel="stylesheet" href="<?php echo base_url("assets/template/bower_components/bootstrap/dist/css/bootstrap.min.css")?>">
+        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"> -->
         <!-- Font Awesome -->
         <link rel="stylesheet" href="<?php echo base_url("assets/template/bower_components/font-awesome/css/font-awesome.min.css")?>">
         <!-- Ionicons -->
@@ -267,13 +271,13 @@
     </form>
     <!-- /.search form -->
     <!-- sidebar menu: : style can be found in sidebar.less -->
-    <ul class="sidebar-menu" data-widget="tree">
+    <ul class="sidebar-menu">
       <li class="header">MAIN NAVIGATION</li>
-      <li class="active treeview">
-        <a href="#">
+      <li class="treeview">
+        <a href="<?php echo site_url('Barang')?>">
           <i class="fa fa-dashboard"></i> <span>Barang</span>
         </a>
-        <a href="#">
+        <a href="<?php echo site_url('asd')?>">
           <i class="fa fa-money"></i> <span>Gaji</span>
         </a>
         <a href="#">
