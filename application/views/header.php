@@ -274,9 +274,12 @@
     <ul class="sidebar-menu">
       <li class="header">MAIN NAVIGATION</li>
       <li class="treeview">
-        <a href="<?php echo site_url('Barang')?>">
-          <i class="fa fa-dashboard"></i> <span>Barang</span>
+        <a href="<?php echo base_url()?>">
+          <i class="fa fa-dashboard"></i> <span>Dashboard</span>
         </a>
+        <!-- <a href="<?php echo site_url('Barang')?>">
+          <i class="fa fa-dashboard"></i> <span>Barang</span>
+        </a> -->
         <a href="<?php echo site_url('Gaji')?>">
           <i class="fa fa-money"></i> <span>Gaji</span>
         </a>
@@ -289,9 +292,9 @@
         <a href="<?php echo site_url('Suplier')?>">
           <i class="fa fa-truck"></i> <span>Suplier</span>
         </a>
-        <a href="<?php echo site_url('Transaksi')?>">
+        <!-- <a href="<?php echo site_url('Transaksi')?>">
           <i class="fa fa-calculator"></i> <span>Transaksi Gudang</span>
-        </a>
+        </a> -->
         <a href="<?php echo site_url('Transaksi')?>">
           <i class="fa fa-calculator"></i> <span>Keuangan</span>
         </a>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Sep 2018 pada 16.43
+-- Waktu pembuatan: 29 Sep 2018 pada 17.40
 -- Versi server: 10.1.35-MariaDB
 -- Versi PHP: 7.2.9
 
@@ -40,11 +40,28 @@ CREATE TABLE `absen` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `barang`
+-- Struktur dari tabel `gudang`
 --
 
-CREATE TABLE `barang` (
+CREATE TABLE `gudang` (
+  `id` int(11) NOT NULL,
+  `no_faktur` varchar(10) NOT NULL,
+  `id_produk` int(11) NOT NULL,
+  `total_masuk` int(11) NOT NULL,
+  `total_keluar` int(11) NOT NULL,
+  `tanggal` date NOT NULL,
+  `id_suplier` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `produk`
+--
+
+CREATE TABLE `produk` (
   `id` int(5) NOT NULL,
+  `kode_produk` varchar(10) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `stok` int(5) NOT NULL,
   `harga_satuan` int(11) NOT NULL
@@ -70,22 +87,6 @@ CREATE TABLE `transaksi` (
   `nip` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `transaksi_barang`
---
-
-CREATE TABLE `transaksi_barang` (
-  `id` int(11) NOT NULL,
-  `no_transaksi` varchar(10) NOT NULL,
-  `id_barang` int(11) NOT NULL,
-  `total_masuk` int(11) NOT NULL,
-  `total_keluar` int(11) NOT NULL,
-  `tanggal` date NOT NULL,
-  `id_suplier` int(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 --
 -- Indexes for dumped tables
 --
@@ -97,9 +98,15 @@ ALTER TABLE `absen`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `barang`
+-- Indeks untuk tabel `gudang`
 --
-ALTER TABLE `barang`
+ALTER TABLE `gudang`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `produk`
+--
+ALTER TABLE `produk`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -109,10 +116,26 @@ ALTER TABLE `transaksi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `transaksi_barang`
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
-ALTER TABLE `transaksi_barang`
-  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT untuk tabel `absen`
+--
+ALTER TABLE `absen`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `produk`
+--
+ALTER TABLE `produk`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `transaksi`
+--
+ALTER TABLE `transaksi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
